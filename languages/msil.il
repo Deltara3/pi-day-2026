@@ -79,6 +79,7 @@
             ldc.i4 10
             ble loop
 
+        // (a + b) ^ 2 / (4 * t)
         ldloc a
         ldloc b
         add
