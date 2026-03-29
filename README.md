@@ -1,4 +1,4 @@
-# Gauss-Legendre Algorithm for π in 173* programming languages**
+# Gauss-Legendre Algorithm for π in 174* programming languages**
 [![wakatime](https://wakatime.com/badge/github/ggodpl/pi-day-2026.svg)](https://wakatime.com/badge/github/ggodpl/pi-day-2026)
 
 [Gauss-Legendre algorithm](https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_algorithm) implementation in 157 programming languages. I originally aimed for 314 languages, but I had way too much confidence in my abilities and only started two weeks before π day, so I had to cut the goal in half.
@@ -22,7 +22,7 @@ fun
 I'd love feedback if you notice errors or want to share a better, more idiomatic version of any implementation!
 
 ## Languages
-**173/157** (110%) languages are implemented:
+**174/157** (111%) languages are implemented:
 
 | Language | File |
 |----------|------|
@@ -107,6 +107,7 @@ I'd love feedback if you notice errors or want to share a better, more idiomatic
 | Koka | [`koka.kk`](languages/koka.kk) |
 | Kotlin Script | [`kotlin-script.kts`](languages/kotlin-script.kts) |
 | Kotlin | [`kotlin.kt`](languages/kotlin.kt) |
+| Krakatau JVM IR | [`krakatau.j`](languages/krakatau.j) |
 | LiveScript | [`livescript.ls`](languages/livescript.ls) |
 | LLVM IR | [`llvm.ll`](languages/llvm.ll) |
 | Lua | [`lua.lua`](languages/lua.lua) |
