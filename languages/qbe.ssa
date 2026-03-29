@@ -33,6 +33,7 @@ function d $gauss_legendre(w %iterations) {
     jnz %cond, @loop, @exit
 
 @exit
+    # return pow(a + b, 2) / (4 * t)
     %ret_a_add_b = d add %a_next, %b_next
     %ret_ab_pow_2 = d mul %ret_a_add_b, %ret_a_add_b
     %ret_4_mul_t = d mul d_4.0, %t_next
