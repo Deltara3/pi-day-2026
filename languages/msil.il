@@ -50,7 +50,7 @@
             call float64 [mscorlib]System.Math::Sqrt(float64)
             stloc b
 
-            // t = t - p * pow(a - an) ^ 2
+            // t = t - p * pow(a - an, 2)
             ldloc t
             ldloc a
             ldloc an
