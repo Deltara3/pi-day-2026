@@ -51,7 +51,7 @@
                 f64.sqrt
                 local.set $b
 
-                ;; t = t - p * pow(a - an) ^ 2
+                ;; t = t - p * pow(a - an, 2)
                 local.get $t
                 local.get $a
                 local.get $an
