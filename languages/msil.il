@@ -39,8 +39,8 @@
             ldloc a
             ldloc b
             add
-            ldc.r8 2.0
-            div
+            ldc.r8 0.5
+            mul
             stloc a
 
             // b = sqrt(an * b)
@@ -55,8 +55,8 @@
             ldloc a
             ldloc an
             sub
-            ldc.r8 2.0
-            call float64 [mscorlib]System.Math::Pow(float64, float64)
+            dup
+            mul
             ldloc p
             mul
             sub
@@ -82,8 +82,8 @@
         ldloc a
         ldloc b
         add
-        ldc.r8 2.0
-        call float64 [mscorlib]System.Math::Pow(float64, float64)
+        dup
+        mul
         ldc.r8 4.0
         ldloc t
         mul
