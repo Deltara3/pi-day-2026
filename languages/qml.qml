@@ -1,7 +1,7 @@
 import QtQuick 2
 
 QtObject {
-    function guassLegendre(iterations) {
+    function gaussLegendre(iterations) {
         let a = 1;
         let b = 1 / Math.sqrt(2);
         let p = 1;
@@ -20,6 +20,6 @@ QtObject {
     }
 
     Component.onCompleted: {
-        console.log(guassLegendre(10))
+        console.log(gaussLegendre(10))
     }
 }
