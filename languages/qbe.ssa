@@ -1,0 +1,48 @@
+data $fmt = { b "%.17g\n", b 0 }
+
+function d $gauss_legendre(w %iterations) {
+@entry
+    jmp @loop
+    
+@loop
+    %a = d phi @entry d_1.0, @loop %a_next
+    %b = d phi @entry d_0.707106781186547, @loop %b_next
+    %p = d phi @entry d_1.0, @loop %p_next
+    %t = d phi @entry d_0.25, @loop %t_next
+    %i = w phi @entry 1, @loop %i_next
+
+    # a = (a + b) / 2.0
+    %op1_a_add_b = d add %a, %b
+    %a_next = d mul %op1_a_add_b, d_0.5
+
+    # b = sqrt(a * b)
+    %op2_a_mul_b = d mul %a, %b
+    %b_next = d call $sqrt(d %op2_a_mul_b)
+
+    # t = t - p * pow(a - an, 2)
+    %op3_a_sub_an = d sub %a_next, %a
+    %op3_aan_pow_2 = d mul %op3_a_sub_an, %op3_a_sub_an
+    %op3_p_mul_aan = d mul %p, %op3_aan_pow_2
+    %t_next = d sub %t, %op3_p_mul_aan
+
+    # p *= 2
+    %p_next = d mul %p, d_2.0
+
+    %cond = w csltw %i, %iterations
+    %i_next = w add %i, 1
+    jnz %cond, @loop, @exit
+
+@exit
+    %ret_a_add_b = d add %a_next, %b_next
+    %ret_ab_pow_2 = d mul %ret_a_add_b, %ret_a_add_b
+    %ret_4_mul_t = d mul d_4.0, %t_next
+    %ret_ab2_div_4t = d div %ret_ab_pow_2, %ret_4_mul_t
+    ret %ret_ab2_div_4t
+}
+
+export function w $main() {
+@entry
+    %result = d call $gauss_legendre(w 10)
+    %_ = w call $printf(l $fmt, ..., d %result)
+    ret 0
+}
