@@ -1,0 +1,23 @@
+import "std/math.zc"
+
+fn gauss_legendre(iterations: i32) -> f64 {
+    let a: f64 = 1.0;
+    let b: f64 = 1.0 / Math::sqrt(2.0);
+    let p: f64 = 1.0;
+    let t: f64 = 0.25;
+
+    for _ in 1..=iterations {
+        let an: f64 = a;
+
+        a = (a + b) / 2.0;
+        b = Math::sqrt(an * b);
+        t = t - p * (an - a) ** 2.0;
+        p = p * 2.0;
+    }
+
+    return (a + b) ** 2 / (4 * t)
+}
+
+fn main() {
+   println "{gauss_legendre(10)}"; 
+}

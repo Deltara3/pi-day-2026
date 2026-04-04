@@ -1,4 +1,4 @@
-# Gauss-Legendre Algorithm for π in 168* programming languages**
+# Gauss-Legendre Algorithm for π in 174* programming languages**
 [![wakatime](https://wakatime.com/badge/github/ggodpl/pi-day-2026.svg)](https://wakatime.com/badge/github/ggodpl/pi-day-2026)
 
 [Gauss-Legendre algorithm](https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_algorithm) implementation in 157 programming languages. I originally aimed for 314 languages, but I had way too much confidence in my abilities and only started two weeks before π day, so I had to cut the goal in half.
@@ -22,7 +22,7 @@ fun
 I'd love feedback if you notice errors or want to share a better, more idiomatic version of any implementation!
 
 ## Languages
-**168/157** (107%) languages are implemented:
+**174/157** (111%) languages are implemented:
 
 | Language | File |
 |----------|------|
@@ -107,6 +107,7 @@ I'd love feedback if you notice errors or want to share a better, more idiomatic
 | Koka | [`koka.kk`](languages/koka.kk) |
 | Kotlin Script | [`kotlin-script.kts`](languages/kotlin-script.kts) |
 | Kotlin | [`kotlin.kt`](languages/kotlin.kt) |
+| Krakatau JVM IR | [`krakatau.j`](languages/krakatau.j) |
 | LiveScript | [`livescript.ls`](languages/livescript.ls) |
 | LLVM IR | [`llvm.ll`](languages/llvm.ll) |
 | Lua | [`lua.lua`](languages/lua.lua) |
@@ -119,6 +120,7 @@ I'd love feedback if you notice errors or want to share a better, more idiomatic
 | Monkey C | [`monkey-c.mc`](languages/monkey-c.mc) |
 | MoonBit | [`moonbit.mbt`](languages/moonbit.mbt) |
 | MoonScript | [`moonscript.moon`](languages/moonscript.moon) |
+| MSIL | [`msil.il`](languages/msil.il) |
 | MY-BASIC | [`my-basic.bas`](languages/my-basic.bas) |
 | Nelua | [`nelua.nelua`](languages/nelua.nelua) |
 | Nemerle | [`nemerle.n`](languages/nemerle.n) |
@@ -144,6 +146,8 @@ I'd love feedback if you notice errors or want to share a better, more idiomatic
 | Python | [`python.py`](languages/python.py) |
 | Python2 | [`python2.py`](languages/python2.py) |
 | Q# | [`q-sharp.qs`](languages/q-sharp.qs) |
+| QBE IR | [`qbe.ssa`](languages/qbe.ssa) | 
+| QML | [`qml.qml`](languages/qml.qml) |
 | R | [`r.r`](languages/r.r) |
 | Racket | [`racket.rkt`](languages/racket.rkt) |
 | Reason | [`reason.re`](languages/reason.re) |
@@ -158,6 +162,7 @@ I'd love feedback if you notice errors or want to share a better, more idiomatic
 | SceneScript | [`scenescript.ss`](languages/scenescript.ss) |
 | Scheme | [`scheme.scm`](languages/scheme.scm) |
 | Scratch | [`scratch.sb3`](languages/scratch.sb3) |
+| SCSS | [`scss.scss`](languages/scss.scss) |
 | Seed7 | [`seed7.sd7`](languages/seed7.sd7) |
 | Self | [`self.self`](languages/self.self) |
 | shitlang | [`shitlang.shit`](languages/shitlang.shit) |
@@ -192,4 +197,5 @@ I'd love feedback if you notice errors or want to share a better, more idiomatic
 | X++ | [`xpp.xpp`](languages/xpp.xpp) |
 | Xtend | [`xtend.xtend`](languages/xtend.xtend) |
 | Yabasic | [`yabasic.yab`](languages/yabasic.yab) |
+| Zen C | [`zenc.zc`](languages/zenc.zc) |
 | Zig | [`zig.zig`](languages/zig.zig) |
