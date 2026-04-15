@@ -1,0 +1,27 @@
+import "pkl:math"
+
+class State {
+    an: Float = 1.0
+    bn: Float = 1.0 / math.sqrt(2.0)
+    pn: Float = 1.0
+    tn: Float = 0.25
+}
+
+function gaussLegendre(iterations: Int): Float =
+    let (result = IntSeq(1, iterations).toList().fold(
+        new State {},
+        (state, _) ->
+            let (a = (state.an + state.bn) / 2.0)
+            let (b = math.sqrt(state.an * state.bn))
+            let (t = state.tn - state.pn * (state.an - a) ** 2.0)
+            let (p = state.pn * 2.0)
+            new State {
+                an = a
+                bn = b
+                pn = p
+                tn = t
+            }
+    ))
+    (result.an + result.bn) ** 2.0 / (4.0 * result.tn)
+
+result = gaussLegendre(10)
